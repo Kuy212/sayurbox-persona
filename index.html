@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas User Persona - Sayurbox</title>
+    <!-- Memuat Tailwind CSS dari CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Google Font 'Inter' untuk tipografi modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Konfigurasi kustom untuk Tailwind (Warna Hijau Khas Sayurbox) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        sayurgreen: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a', // Primary Sayurbox Green
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased py-10 px-4 md:px-8">
+
+    <header class="max-w-5xl mx-auto mb-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-sayurgreen-700 mb-3 tracking-tight">Tugas User Persona</h1>
+        <p class="text-lg text-slate-500 font-medium bg-white inline-block px-4 py-1.5 rounded-full shadow-sm border border-slate-200">
+            Studi Kasus: <span class="text-sayurgreen-600 font-bold">Sayurbox</span> App
+        </p>
+    </header>
+
+    <main class="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 transition-all hover:shadow-2xl">
+        
+        <!-- Grid Layout: Sidebar Profil (Kiri) & Konten Detail (Kanan) -->
+        <div class="grid grid-cols-1 md:grid-cols-12">
+            
+            <aside class="md:col-span-4 bg-sayurgreen-50 p-8 border-b md:border-b-0 md:border-r border-sayurgreen-100 flex flex-col items-center md:items-start text-center md:text-left">
+                <!-- Avatar -->
+                <div class="relative mb-6 group">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" alt="Rina Suryani - Manajer HRD" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-sayurgreen-200 rounded-full blur-md transform translate-y-2 opacity-60 z-0"></div>
+                </div>
+
+                <!-- Info Dasar -->
+                <h2 class="text-2xl font-bold text-slate-800 mb-1">Rina Suryani</h2>
+                <p class="text-sayurgreen-600 font-semibold text-sm tracking-wide uppercase mb-4">Manajer HRD</p>
+                
+                <!-- Demografi Info -->
+                <ul class="w-full space-y-3 mb-6">
+                    <li class="flex items-center justify-center md:justify-start text-sm text-slate-600">
+                        <svg class="w-5 h-5 mr-3 text-sayurgreen-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        32 Tahun
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start text-sm text-slate-600">
+                        <svg class="w-5 h-5 mr-3 text-sayurgreen-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Ibu 2 Anak
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start text-sm text-slate-600">
+                        <svg class="w-5 h-5 mr-3 text-sayurgreen-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Jakarta Selatan (Jabodetabek)
+                    </li>
+                </ul>
+
+                <!-- Motivasi / Behavior -->
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-sayurgreen-100 w-full">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Motivasi & Perilaku</h3>
+                    <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Manajemen Waktu</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Kesehatan Keluarga</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">Tech-Savvy</span>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="md:col-span-8 p-8 flex flex-col justify-between">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+                    
+                    <!-- Goals & Needs -->
+                    <div class="bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-500 flex items-center justify-center mr-3 shadow-sm border border-blue-100">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Goals & Needs</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-blue-500 mr-2 mt-0.5 font-bold">✓</span>
+                                Ingin belanja sayur, buah, dan daging segar tanpa harus repot pergi ke pasar basah.
+                            </li>
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-blue-500 mr-2 mt-0.5 font-bold">✓</span>
+                                Membutuhkan pengiriman yang bisa dijadwalkan agar pas tiba saat ia ada di rumah sepulang kerja.
+                            </li>
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-blue-500 mr-2 mt-0.5 font-bold">✓</span>
+                                Memiliki keinginan untuk mendukung petani lokal Indonesia dengan membeli hasil panen mereka secara langsung.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pain Points -->
+                    <div class="bg-white">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-red-50 text-red-500 flex items-center justify-center mr-3 shadow-sm border border-red-100">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Pain Points</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-red-500 mr-2 mt-0.5 font-bold">✕</span>
+                                Sering tidak punya waktu luang untuk belanja di pagi hari sebelum berangkat kerja.
+                            </li>
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-red-500 mr-2 mt-0.5 font-bold">✕</span>
+                                Merasa frustrasi dengan kemacetan Jakarta jika harus meluangkan waktu pergi ke supermarket.
+                            </li>
+                            <li class="flex items-start text-slate-600 text-sm leading-relaxed">
+                                <span class="text-red-500 mr-2 mt-0.5 font-bold">✕</span>
+                                Khawatir bahan makanan (terutama daging dan ikan) menjadi rusak atau tidak segar di perjalanan jika menggunakan kurir biasa.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-sayurgreen-600 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group">
+                    <!-- Dekorasi Background Latar -->
+                    <div class="absolute -right-6 -top-6 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl transform group-hover:scale-150 transition-transform duration-700"></div>
+                    
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-sayurgreen-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Solusi dari Sayurbox
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-sayurgreen-700 bg-opacity-50 p-4 rounded-xl backdrop-blur-sm border border-sayurgreen-500 border-opacity-50 hover:bg-opacity-70 transition-colors">
+                            <h4 class="font-semibold text-sm mb-1 text-sayurgreen-100">Cold Supply Chain</h4>
+                            <p class="text-xs text-sayurgreen-50">Sistem pendingin terintegrasi memastikan daging dan sayur tetap segar hingga sampai ke tangan Rina.</p>
+                        </div>
+                        <div class="bg-sayurgreen-700 bg-opacity-50 p-4 rounded-xl backdrop-blur-sm border border-sayurgreen-500 border-opacity-50 hover:bg-opacity-70 transition-colors">
+                            <h4 class="font-semibold text-sm mb-1 text-sayurgreen-100">Jadwal Pengiriman</h4>
+                            <p class="text-xs text-sayurgreen-50">Fleksibilitas memilih slot waktu pengiriman, sehingga pesanan tiba tepat saat Rina sudah ada di rumah.</p>
+                        </div>
+                        <div class="bg-sayurgreen-700 bg-opacity-50 p-4 rounded-xl backdrop-blur-sm border border-sayurgreen-500 border-opacity-50 hover:bg-opacity-70 transition-colors">
+                            <h4 class="font-semibold text-sm mb-1 text-sayurgreen-100">Dukungan Petani</h4>
+                            <p class="text-xs text-sayurgreen-50">Menyediakan akses ke 5000+ produk langsung dari petani lokal, menjawab keinginan Rina untuk memberdayakan petani.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-10 text-center text-sm text-slate-400">
+        <p>Desain Persona Card interaktif menggunakan Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
